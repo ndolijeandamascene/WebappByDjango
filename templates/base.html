@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}store{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="menu">
+              <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Contact Us</a></li>
+              </ul>
+            </div>
+            <div class="account">
+                <ul>
+                    <li><a href="#">Login</a></li>
+                    <li><a href="#">Register</a></li>
+                </ul>
+            </div>
+
+        </nav>
+    </header>
+    <section>
+        <main>
+            <!-- main content goes here -->
+            {% block content %}
+            {% endblock %}
+        </main>
+    </section>
+    <footer>
+        <p>&copy; 2023 Store. All rights reserved.</p>
+        <p>Follow us on social media for updates.</p>
+    </footer>
+</body>
+</html>
